@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --color-brand: #1a1a1a;
+  --color-accent: #f0f0f0;
+}
+
+body {
+  background-color: var(--color-accent);
+  color: var(--color-brand);
+  overflow-x: hidden;
+}
+
+/* Custom smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Utilities for GSAP */
+.reveal-text {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.char {
+  display: inline-block;
+}
