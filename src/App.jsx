@@ -1,16 +1,18 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, lazy, Suspense } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
 import Header from './components/Header';
 import Hero from './sections/Hero';
-import About from './sections/About';
-import Services from './sections/Services';
-import Stats from './sections/Stats';
-import Skills from './sections/Skills';
-import Experience from './sections/Experience';
-import Projects from './sections/Projects';
-import Footer from './components/Footer';
+
+// Lazy load below-the-fold sections to reduce unused JS
+const About = lazy(() => import('./sections/About'));
+const Services = lazy(() => import('./sections/Services'));
+const Stats = lazy(() => import('./sections/Stats'));
+const Skills = lazy(() => import('./sections/Skills'));
+const Projects = lazy(() => import('./sections/Projects'));
+const Experience = lazy(() => import('./sections/Experience'));
+const Footer = lazy(() => import('./components/Footer'));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +38,6 @@ function App() {
     requestAnimationFrame(raf);
 
     const ctx = gsap.context(() => {
-      // Global animations or smooth scroll setup can go here
     }, appRef);
 
     return () => {
@@ -50,14 +51,18 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
-        <Services />
-        <Stats />
-        <Skills />
-        <Projects />
-        <Experience />
+        <Suspense fallback={<div className="min-h-screen bg-neutral-900" />}>
+          <About />
+          <Services />
+          <Stats />
+          <Skills />
+          <Projects />
+          <Experience />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

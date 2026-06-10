@@ -24,10 +24,21 @@ export default function About() {
   return (
     <section id="about" ref={sectionRef} className="py-24 md:py-40 px-6 md:px-12 bg-neutral-900 text-neutral-50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
-        <div className="md:col-span-4">
+        <div className="md:col-span-4 flex flex-col gap-8">
           <h2 className="about-text text-sm font-medium tracking-widest uppercase mb-4 text-neutral-400">
             About Me
           </h2>
+          <div className="about-text w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-2 border-neutral-800">
+            <img
+              src="/profile.jpg"
+              alt="Denise Aldianto"
+              width="256"
+              height="256"
+              decoding="async"
+              loading="lazy"
+              className="w-full h-full object-cover object-top grayscale hover:grayscale-0 transition-all duration-500"
+            />
+          </div>
         </div>
         <div className="md:col-span-8">
           <p className="text-2xl md:text-4xl leading-tight font-serif mb-8">

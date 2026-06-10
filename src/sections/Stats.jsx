@@ -4,7 +4,7 @@ import gsap from 'gsap';
 const stats = [
   { value: '4+', label: 'Years Experience' },
   { value: '7,000+', label: 'Corporate Assets Managed' },
-  { value: '70%', label: 'Admin Time Reduced' },
+  { value: '70%', label: 'Operational Efficiency Boost' },
   { value: '100%', label: 'Zero-Downtime Deploys' }
 ];
 
