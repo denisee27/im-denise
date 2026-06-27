@@ -8,35 +8,35 @@ const projects = [
     category: 'Full-Stack • AI',
     description: 'Interactive AI receptionist with facial recognition for seamless visitor management.',
     video: '/ai_receptionist.webm',
-    tools: ['React', 'Node.js', 'OpenAI', 'WebRTC', 'Tailwind CSS']
+    tools: ['React Vite', 'Express.js', 'Google ADK', 'TensorFlow.js', 'Three.js', 'Socket.io', 'Tailwind CSS']
   },
   {
     title: 'Real-time Voice Translator',
     category: 'Full-Stack • AI',
     description: 'Real-time bilingual voice translator designed to bridge communication gaps instantly.',
     video: '/translator.webm',
-    tools: ['Next.js', 'Python', 'Whisper AI', 'Socket.io', 'FastAPI']
+    tools: ['React Vite', 'Express.js', 'Speech To Text Google', 'Google Cloud Translation', 'Socket.io', 'FastAPI', 'Tailwind CSS']
   },
   {
     title: 'Asset Management System',
     category: 'Enterprise • Web',
     description: 'Comprehensive system supporting 670+ users, seamlessly integrated with SAP.',
     video: '/asset_management_system.webm',
-    tools: ['React', 'TypeScript', 'Node.js', 'SAP RFC', 'PostgreSQL']
+    tools: ['React Vite', 'Express.js', 'SAP Integration', 'PostgreSQL']
   },
   {
     title: 'Offline-First Inventory App',
     category: 'Mobile • Flutter',
     description: 'Mobile application engineered for field operations with low internet connectivity.',
     video: '/inventory_mobile.webm',
-    tools: ['Flutter', 'Dart', 'SQLite', 'REST API']
+    tools: ['Flutter', 'Dart', 'MySQL', 'Laravel Lumen']
   },
   {
     title: 'Customer Support Module',
     category: 'Enterprise • Web',
     description: 'An integrated support module for managing tickets and resolving customer issues efficiently.',
     video: '/support_module.webm',
-    tools: ['React', 'Express', 'MySQL', 'Redis']
+    tools: ['React Vite', 'Express.js', 'MySQL', 'Redis']
   }
 ];
 
